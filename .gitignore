@@ -1,0 +1,13 @@
+.env
+__pycache__/
+*.pyc
+data/*.db
+data/tmp_export/
+.venv/
+frontend/node_modules/
+frontend/dist/
+dashboard/
+.claude/*.lock
+vendor/
+job_*.csv
+job_*.json

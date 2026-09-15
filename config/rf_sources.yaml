@@ -1,0 +1,68 @@
+# Caminho do extrato local da Receita Federal (ver src/prospector/rf_source.py)
+# por segmento, e o CNAE usado para gerar esse extrato via BigQuery
+# (basedosdados.br_me_cnpj.estabelecimentos), para referência ao atualizar.
+#
+# Colunas do CSV: só "cnpj" é obrigatória (nome do estabelecimento vem do
+# próprio Portal SEUMA na hora da checagem — ver get_result_name em
+# etapa3_seuma.py). "socio_nome" é opcional (nome do dono/sócio, vindo do
+# JOIN com basedosdados.br_me_cnpj.socios) e "bairro" também é opcional
+# (só segmentos que precisam de filtro por bairro têm essa coluna).
+#
+# Como gerar/atualizar um extrato: ver README.md, seção "Atualizando a base
+# da Receita Federal local".
+
+Restaurantes:
+  csv: data/rf_fortaleza_restaurantes.csv
+  cnae_fiscal_principal: "5611201"
+
+Clínicas odontológicas:
+  csv: data/rf_fortaleza_clinicas_odontologicas.csv
+  cnae_fiscal_principal: "8630504"
+
+Clínicas veterinárias:
+  csv: data/rf_fortaleza_clinicas_veterinarias.csv
+  cnae_fiscal_principal: "7500100"
+
+Escolas:
+  csv: data/rf_fortaleza_escolas.csv
+  cnae_fiscal_principal: ["8513900", "8520100"]
+
+Indústrias:
+  csv: data/rf_fortaleza_industrias.csv
+  cnae_fiscal_principal: ["1412601", "1091100"]
+
+Hotéis/pousadas:
+  csv: data/rf_fortaleza_hoteis_pousadas.csv
+  cnae_fiscal_principal: "5510801"
+
+Farmácias:
+  csv: data/rf_fortaleza_farmacias.csv
+  cnae_fiscal_principal: ["4771701", "4771702"]
+
+Laboratórios:
+  csv: data/rf_fortaleza_laboratorios.csv
+  cnae_fiscal_principal: "8640202"
+
+Salões/estética:
+  csv: data/rf_fortaleza_saloes_estetica.csv
+  cnae_fiscal_principal: ["9602501", "9602502"]
+
+Academias:
+  csv: data/rf_fortaleza_academias.csv
+  cnae_fiscal_principal: "9313100"
+
+Supermercados:
+  csv: data/rf_fortaleza_supermercados.csv
+  cnae_fiscal_principal: "4711302"
+
+Padarias:
+  csv: data/rf_fortaleza_padarias.csv
+  cnae_fiscal_principal: ["4721102", "4721103"]
+
+Oficinas mecânicas:
+  csv: data/rf_fortaleza_oficinas_mecanicas.csv
+  cnae_fiscal_principal: "4520001"
+
+Construtoras:
+  csv: data/rf_fortaleza_construtoras.csv
+  cnae_fiscal_principal: "4120400"

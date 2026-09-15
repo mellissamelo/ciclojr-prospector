@@ -1,0 +1,159 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+/* base-ui components set data-orientation="horizontal"/"vertical" (a
+   key-value attribute), not a bare data-horizontal/data-vertical boolean —
+   Tailwind's generic data-* variant only auto-matches bare boolean
+   attributes, so these two need to be registered explicitly. */
+@custom-variant data-horizontal (&[data-orientation="horizontal"]);
+@custom-variant data-vertical (&[data-orientation="vertical"]);
+
+:root {
+  --radius: 1.1rem;
+
+  /* CicloJr brand */
+  --background: #bfe3da;
+  --foreground: #16231c;
+  --card: #ffffff;
+  --card-foreground: #16231c;
+  --popover: #ffffff;
+  --popover-foreground: #16231c;
+  --primary: #005947;
+  --primary-foreground: #ffffff;
+  --secondary: #e1f4ec;
+  --secondary-foreground: #005947;
+  --muted: #eef0e8;
+  --muted-foreground: #6c7a6e;
+  --accent: #f2994a;
+  --accent-foreground: #3a2408;
+  --destructive: #c0392b;
+  --destructive-foreground: #ffffff;
+  --border: #dfe6db;
+  --input: #dfe6db;
+  --ring: #005947;
+
+  --brand-forest: #005947;
+  --brand-teal: #03b18b;
+  --brand-green: #08b855;
+  --brand-orange: #f2994a;
+  --brand-coral: #ef7b63;
+  --brand-cream: #fffcf5;
+  --panel: #f6fbf8;
+
+  --chart-1: #005947;
+  --chart-2: #03b18b;
+  --chart-3: #08b855;
+  --chart-4: #f2994a;
+  --chart-5: #c0392b;
+  --success: var(--color-emerald-500);
+  --success-foreground: var(--color-emerald-900);
+  --info: var(--color-violet-500);
+  --info-foreground: var(--color-violet-900);
+  --warning: var(--color-yellow-500);
+  --warning-foreground: var(--color-yellow-900);
+  --invert: var(--color-zinc-900);
+  --invert-foreground: var(--color-zinc-50);
+}
+
+.dark {
+  --background: #0e1613;
+  --foreground: #e9f2ec;
+  --card: #16211b;
+  --card-foreground: #e9f2ec;
+  --popover: #16211b;
+  --popover-foreground: #e9f2ec;
+  --primary: #3fae86;
+  --primary-foreground: #0e1613;
+  --secondary: #1c2b24;
+  --secondary-foreground: #7fe0bb;
+  --muted: #1a231d;
+  --muted-foreground: #8fa398;
+  --accent: #ffb066;
+  --accent-foreground: #341c02;
+  --destructive: #e08065;
+  --destructive-foreground: #0e1613;
+  --border: #263229;
+  --input: #263229;
+  --ring: #3fae86;
+
+  --brand-forest: #3fae86;
+  --brand-teal: #1fd1a5;
+  --brand-green: #3ecb7c;
+  --brand-orange: #ffb066;
+  --brand-coral: #ff9478;
+  --brand-cream: #16211b;
+  --panel: #16211b;
+
+  --chart-1: #3fae86;
+  --chart-2: #1fd1a5;
+  --chart-3: #3ecb7c;
+  --chart-4: #ffb066;
+  --chart-5: #e08065;
+  --success: var(--color-emerald-500);
+  --success-foreground: var(--color-emerald-600);
+  --info: var(--color-violet-500);
+  --info-foreground: var(--color-violet-600);
+  --warning: var(--color-yellow-500);
+  --warning-foreground: var(--color-yellow-600);
+  --invert: var(--color-zinc-700);
+  --invert-foreground: var(--color-zinc-50);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-brand-forest: var(--brand-forest);
+  --color-brand-teal: var(--brand-teal);
+  --color-brand-green: var(--brand-green);
+  --color-brand-orange: var(--brand-orange);
+  --color-brand-coral: var(--brand-coral);
+  --color-brand-cream: var(--brand-cream);
+  --color-panel: var(--panel);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-invert-foreground: var(--invert-foreground);
+  --color-invert: var(--invert);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-warning: var(--warning);
+  --color-info-foreground: var(--info-foreground);
+  --color-info: var(--info);
+  --color-success-foreground: var(--success-foreground);
+  --color-success: var(--success);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

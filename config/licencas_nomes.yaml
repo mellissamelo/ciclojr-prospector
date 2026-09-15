@@ -1,0 +1,18 @@
+# Mapeamento sigla -> nome comercial do serviço (usado no output do lead).
+#
+# PENDENTE: o documento original (prompt-construcao-sistema-leads-licencas.md,
+# seção "Mapeamento para serviço") deixa explícito que essa tabela ainda não
+# foi definida e deve ser fornecida por quem for operar o sistema.
+# Os valores abaixo são placeholders com o nome por extenso da licença — troque
+# pelo nome comercial real do serviço antes de rodar em produção.
+
+AF: "Alvará de Funcionamento"
+AS: "Auto de Segurança (Corpo de Bombeiros)"
+CCB: "Certificado de Conformidade de Bombeiros"
+LAR: "Licença Ambiental de Regularização"
+LPP: "Licença de Publicidade/Placa"
+LS: "Licença Sanitária"
+MBP: "Manual de Boas Práticas"
+POP: "Procedimento Operacional Padrão"
+PGRS_PGRSS: "Plano de Gerenciamento de Resíduos Sólidos/Serviços de Saúde"
+Outorga: "Outorga de Uso de Recursos Hídricos"

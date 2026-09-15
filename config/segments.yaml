@@ -1,0 +1,66 @@
+# Tabela de segmentos e licenças exigidas (fonte: prompt-construcao-sistema-leads-licencas.md)
+#
+# forte_demanda: siglas com ✅ no documento original — pelo menos uma dessas,
+#   vencida ou ausente, é exigida para o lead ser qualificado (regra da Etapa 3, item 6).
+# condicional: siglas com ⚠️ — dependem da atividade/estrutura específica do
+#   estabelecimento. São checadas e reportadas se vencidas/ausentes, mas
+#   sozinhas NÃO qualificam um lead.
+#
+# Siglas: AF, AS, CCB, LAR, LPP, LS, MBP, POP, PGRS_PGRSS, Outorga
+
+segments:
+  Restaurantes:
+    forte_demanda: [AF, AS, CCB, LAR, LPP, LS, MBP, POP, PGRS_PGRSS]
+    condicional: [Outorga]
+
+  Clínicas odontológicas:
+    forte_demanda: [AF, CCB, LPP, LS, MBP, POP, PGRS_PGRSS]
+    condicional: [AS, LAR, Outorga]
+
+  Clínicas veterinárias:
+    forte_demanda: [AF, CCB, LPP, LS, MBP, POP, PGRS_PGRSS]
+    condicional: [AS, LAR, Outorga]
+
+  Escolas:
+    forte_demanda: [AF, CCB, LPP, LS, MBP, POP, PGRS_PGRSS]
+    condicional: [AS, LAR, Outorga]
+
+  Indústrias:
+    forte_demanda: [AF, CCB, LAR, LPP, POP, PGRS_PGRSS, Outorga]
+    condicional: [AS, LS, MBP]
+
+  Hotéis/pousadas:
+    forte_demanda: [AF, AS, CCB, LPP, LS, MBP, POP, PGRS_PGRSS]
+    condicional: [LAR, Outorga]
+
+  Farmácias:
+    forte_demanda: [AF, CCB, LPP, LS, MBP, POP]
+    condicional: [AS, LAR, PGRS_PGRSS, Outorga]
+
+  Laboratórios:
+    forte_demanda: [AF, CCB, LPP, LS, MBP, POP, PGRS_PGRSS]
+    condicional: [AS, LAR, Outorga]
+
+  Salões/estética:
+    forte_demanda: [AF, LPP, LS, MBP, POP]
+    condicional: [AS, CCB, LAR, PGRS_PGRSS, Outorga]
+
+  Academias:
+    forte_demanda: [AF, CCB, LPP, LS, MBP, POP]
+    condicional: [AS, LAR, PGRS_PGRSS, Outorga]
+
+  Supermercados:
+    forte_demanda: [AF, CCB, LAR, LPP, LS, MBP, POP, PGRS_PGRSS]
+    condicional: [AS, Outorga]
+
+  Padarias:
+    forte_demanda: [AF, CCB, LPP, LS, MBP, POP, PGRS_PGRSS]
+    condicional: [AS, LAR, Outorga]
+
+  Oficinas mecânicas:
+    forte_demanda: [AF, CCB, LAR, LPP, POP, PGRS_PGRSS]
+    condicional: [AS, LS, MBP, Outorga]
+
+  Construtoras:
+    forte_demanda: [AF, CCB, LAR, LPP, PGRS_PGRSS]
+    condicional: [AS, LS, MBP, POP, Outorga]
