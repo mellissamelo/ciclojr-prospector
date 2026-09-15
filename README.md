@@ -22,26 +22,34 @@ pago pra rodar do zero.
 
 ## Setup (do zero, em qualquer máquina)
 
-```bash
-git clone https://github.com/mellissamelo/ciclojr-prospector.git
-cd ciclojr-prospector
+1. Baixe o projeto — clone com `git clone` **ou** clique em **Code → Download
+   ZIP** no GitHub e descompacte.
+2. Instale os pré-requisitos acima (Python e Node.js).
+3. Dê duplo-clique em **`configurar.bat`**. Isso cria o ambiente Python,
+   instala as dependências e baixa o Chromium do Playwright — só precisa
+   rodar essa uma vez, pode demorar alguns minutos (baixa ~300MB).
+4. A partir daí, dê duplo-clique em **`iniciar_painel.bat`** sempre que
+   quiser usar o sistema.
 
+Não precisa criar `.env`, configurar API key nem mexer em terminal — os
+dois `.bat` fazem tudo.
+
+Prefere fazer manualmente ou não é Windows? O equivalente do
+`configurar.bat` é:
+
+```bash
 python -m venv .venv
-.venv\Scripts\activate
+.venv\Scripts\activate   # Linux/Mac: source .venv/bin/activate
 pip install -r requirements.txt
 playwright install chromium
 ```
-
-Pronto — já dá pra usar. Não precisa criar `.env`, configurar API key nem
-buildar o painel manualmente (o passo abaixo faz isso sozinho).
 
 ## Como rodar
 
 **Painel web (recomendado):** dê duplo-clique em `iniciar_painel.bat` (ou
 rode `python scripts\iniciar_painel.py`). Na primeira vez ele builda o
 painel React sozinho (`npm install` + `npm run build` dentro de
-`frontend/`, por isso precisa do Node.js) e confirma que o Chromium do
-Playwright está instalado — pode demorar um minuto na primeira execução.
+`frontend/`, por isso precisa do Node.js) — pode demorar um minuto.
 Depois disso abre o navegador em http://127.0.0.1:5000/, onde dá pra
 escolher setor + bairro e clicar em "Prospectar" direto na página.
 
