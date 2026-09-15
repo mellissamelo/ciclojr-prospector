@@ -10,9 +10,9 @@ Sem argumento, escolhe um segmento por rotação (dia do ano % número de
 segmentos) — só usado no agendamento automático. Rodando manualmente
 (rodar_hoje.bat), prefira sempre passar o segmento e, se quiser, o bairro.
 
-Teto de leads é SEMANAL (50/semana, não por execução) e não repete CNPJ já
-entregue — pode rodar várias vezes na mesma semana sem duplicar trabalho: o
-sistema pula CNPJs checados nos últimos 30 dias automaticamente.
+Sem teto de leads — roda até acabar a lista ou até você parar (Ctrl+C aqui,
+ou o botão "Parar" no painel web). Não repete CNPJ já checado nos últimos 30
+dias, então pode rodar várias vezes sem duplicar trabalho.
 """
 from __future__ import annotations
 

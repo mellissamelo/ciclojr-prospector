@@ -6,8 +6,7 @@ echo ==========================================
 echo   Prospector - Leads de Licencas (Fortaleza-CE)
 echo ==========================================
 echo.
-echo Segmentos com extrato pronto: Restaurantes
-echo (outros segmentos precisam de uma extracao nova - ver README.md)
+echo Segmentos disponiveis: ver config\rf_sources.yaml (14 setores prontos)
 echo.
 set /p SEGMENTO="Setor (Enter = Restaurantes): "
 if "%SEGMENTO%"=="" set SEGMENTO=Restaurantes
